@@ -59,3 +59,17 @@ function largestOf(arr){
     return largestNumArr
 }
 largestOf([[4,5,1,3],[13,27,18,26],[32,35,37,39],[1000,1001,857,1]])
+
+//confirm ending
+function confirmEnding(str, target){
+    const strLen = str.length
+    const targetLen = target.length
+    const endingCharNum = strLen - targetLen
+    //str nin uzunluğundan target uzunluğunu çıkardık
+    const ending = str.substring(endingCharNum)
+    //kalan kısmı strnin tamamından çıkardık
+    return target == ending
+    //en son kalan kısımla target eşit mi diye baktık
+}
+console.log(`Connor kelimesi n harfi ile mi bitiyor? ${confirmEnding("Connor","n")}`)
+console.log(`Bastian kelimesi n harfi ile mi bitiyor? ${confirmEnding("Bastian","n")}`)
