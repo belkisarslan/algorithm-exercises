@@ -20,3 +20,15 @@ function faktorialize(num){
     return product
 }
 console.log(`faktorialize number: ${faktorialize(5)}`)
+
+//find the longest word in a string
+function find(str){
+    const splitText =str.split(" ")
+    let maxNumber = 0
+    for(let i=0; i<splitText.length; i++){
+        maxNumber= Math.max(maxNumber, splitText[i].length)
+    }
+    console.log(`find the longest word in a string: ${maxNumber}`)
+    return str.length
+}
+find("The quick brown fox jebped over the lazy dog")
