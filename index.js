@@ -87,3 +87,13 @@ function titleCase(str){
     return result
 }
 titleCase("sHort AnD stOUt")
+
+//Slice and Splice
+function franSplice(arr1, arr2, n){
+    let copiedAr1 = [...arr1]
+    let copiedAr2 = [...arr2]
+    copiedAr2.splice(n, 0, ...copiedAr1)
+    console.log(`slice and splice [${copiedAr2}]`)
+    return copiedAr2
+}
+franSplice([1,2,3],[4,5,6],1)
