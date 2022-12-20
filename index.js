@@ -46,3 +46,16 @@ function finded(str){
     //max methoduyla en büyük olanı bulduk
 }
 console.log(`find the longest word in a string 2. method: ${finded("The quick brown fox jebped over the lazy dog")}`)
+
+//return largest numbers in arrays
+function largestOf(arr){
+    let largestNumArr= []
+    //boş bi array oluşturduk
+    for(let i=0; i<arr.length; i++){
+        largestNumArr.push(Math.max(...arr[i]))
+        //elemanlardan en büyüklerini yeni arraye pushladık
+    }
+    console.log(`return largest numbers in arrays: ${largestNumArr}`)
+    return largestNumArr
+}
+largestOf([[4,5,1,3],[13,27,18,26],[32,35,37,39],[1000,1001,857,1]])
