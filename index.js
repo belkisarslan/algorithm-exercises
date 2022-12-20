@@ -32,3 +32,17 @@ function find(str){
     return str.length
 }
 find("The quick brown fox jebped over the lazy dog")
+
+//find the longest word in a string 2. method
+function finded(str){
+    const splitText =str.split(" ")
+    //karakterleri böldükten sonra boş bir array oluşturduk
+    let numericArray = []
+    for(let i=0; i<splitText.length; i++){
+        numericArray.push(splitText[i].length)
+        //karakterlerin uzunluklarını boş arraye pushladık
+    }
+    return Math.max(...numericArray)
+    //max methoduyla en büyük olanı bulduk
+}
+console.log(`find the longest word in a string 2. method: ${finded("The quick brown fox jebped over the lazy dog")}`)
