@@ -73,3 +73,17 @@ function confirmEnding(str, target){
 }
 console.log(`Connor kelimesi n harfi ile mi bitiyor? ${confirmEnding("Connor","n")}`)
 console.log(`Bastian kelimesi n harfi ile mi bitiyor? ${confirmEnding("Bastian","n")}`)
+
+//title case
+function titleCase(str){
+    const myArr = str.split(" ")
+    let myResultAr = []
+    for(let i=0; i<myArr.length; i++){
+        const item = myArr[i].charAt(0).toUpperCase() + myArr[i].slice(1).toLowerCase();
+        myResultAr.push(item)
+    }
+    const result = myResultAr.join(" ")
+    console.log(`title case: ${result}`)
+    return result
+}
+titleCase("sHort AnD stOUt")
