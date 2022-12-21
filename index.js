@@ -110,7 +110,7 @@ bouncer([7, "ate", "", false, 9])
 //falsy bouncer 2. method
 function bouncer2(arr){
     let trutyArr = []
-    for(let i=0; i<arr.length; i++){
+    for(let i=0; i<(arr.length); i++){
         if( Boolean(arr[i])){
             trutyArr.push(arr[i])
         }
@@ -119,3 +119,17 @@ function bouncer2(arr){
     return trutyArr
 }
 bouncer2([7, "ate", "", false, 9])
+
+//where do i belong
+function getIndexTo(arr, num){
+    let count = 0;
+    for(let i=0; i<arr.length; i++){
+     if(arr[i] < num){
+        count++
+     }
+    }
+    console.log(`${num} ${count}. index'e gelmelidir`)
+    return num
+}
+getIndexTo([40, 60], 50)
+getIndexTo([10, 20, 30, 50], 40)
