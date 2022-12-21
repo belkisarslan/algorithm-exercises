@@ -133,3 +133,15 @@ function getIndexTo(arr, num){
 }
 getIndexTo([40, 60], 50)
 getIndexTo([10, 20, 30, 50], 40)
+
+//chunky monkey
+function chunkyMonkey(arr, size){
+    let mainArr = []
+    while(arr.length){
+        const removedArr = arr.splice(0, size)
+        mainArr.push(removedArr)
+    }
+    console.log(mainArr)
+    return mainArr;
+}
+chunkyMonkey(["a", "b", "c", "d"], 2)
