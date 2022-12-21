@@ -97,3 +97,25 @@ function franSplice(arr1, arr2, n){
     return copiedAr2
 }
 franSplice([1,2,3],[4,5,6],1)
+
+//falsy bouncer
+function bouncer(arr){
+    const result = arr.filter(item => Boolean(item))
+    //arr.filter(Boolean) şeklinde de yazılabilir
+    console.log(`falsy bouncer: [${result}]`)
+    return result
+}
+bouncer([7, "ate", "", false, 9])
+
+//falsy bouncer 2. method
+function bouncer2(arr){
+    let trutyArr = []
+    for(let i=0; i<arr.length; i++){
+        if( Boolean(arr[i])){
+            trutyArr.push(arr[i])
+        }
+    }
+    console.log(`falsy bouncer 2. method: [${trutyArr}]`)
+    return trutyArr
+}
+bouncer2([7, "ate", "", false, 9])
