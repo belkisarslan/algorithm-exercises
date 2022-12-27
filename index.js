@@ -145,3 +145,13 @@ function chunkyMonkey(arr, size){
     return mainArr;
 }
 chunkyMonkey(["a", "b", "c", "d"], 2)
+
+//coints duplicate
+let containsDuplicate =(nums)=>{
+    //Set benzersiz değerleri tutan bir JavaScript nesnesidir. Her veri tipinde değer tutabilir. Fakat aynı değeri birden fazla kez içeremez.
+    const numSet = new Set(nums)
+    //Bir Set nesnesinin kaç değer tuttuğunu öğrenmek için size özelliğine bakarız.
+    const isEqual = numSet.size === nums.length
+    return !isEqual
+}
+console.log(`iki kere tekrarlanan rakam var mı: ${containsDuplicate([1, 2, 2, 3])}`)
