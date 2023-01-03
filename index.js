@@ -168,3 +168,20 @@ let twoSum = (nums, target)=>{
     return [-1, -1]
 }
 console.log(twoSum([2, 7, 11 ,15], 9))
+
+//happy number
+let happyNumber = function(num, counter=0){
+    result = false
+   if(counter < 8){
+    let single = num.toString().split("").map(m=>m*m)
+    let arr = single.reduce((a, b) => a + b, 0)
+    if(arr == 1){
+        return result = true
+    }else{
+        counter++
+        happyNumber(arr, counter)
+    }   
+   }
+    return result
+}
+console.log(happyNumber(19))
