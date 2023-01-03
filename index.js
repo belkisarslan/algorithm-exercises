@@ -185,3 +185,17 @@ let happyNumber = function(num, counter=0){
     return result
 }
 console.log(happyNumber(19))
+
+//modify array 
+function modifyArray(nums){
+    let newNumber = (e) => {
+        if(e%2 == 0){
+         return e*2
+        }else if(e%2 == 1){
+            return e*3
+        }
+    }
+    let newArray=nums.map(newNumber)
+    return newArray
+}
+console.log(modifyArray([1, 2, 3]))
