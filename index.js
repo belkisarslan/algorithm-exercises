@@ -199,3 +199,11 @@ function modifyArray(nums){
     return newArray
 }
 console.log(modifyArray([1, 2, 3]))
+
+//regexVar
+function regexVar(){
+    let re = /^(Mr|Mrs|Ms|Dr|Er)(\.)([a-zA-Z])+$/;
+    return re
+}
+re = regexVar()
+console.log(re.test('Dr.Ahmet'))
