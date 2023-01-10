@@ -207,3 +207,15 @@ function regexVar(){
 }
 re = regexVar()
 console.log(re.test('Dr.Ahmet'))
+
+//string challenge
+// take the num parameter being passed and retirn the number of hours and minutes the parmeter converts to. separate the number of hours and minutes with a colon.
+function StringChallenge(num){
+    let minute = 60;
+    let hour = Math.floor(num / minute);
+    let remainder = num % minute;
+    let numNew = hour + ":" + remainder;
+
+    return numNew;
+}
+console.log(StringChallenge(126))
