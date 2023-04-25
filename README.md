@@ -10,21 +10,22 @@
 
 ## Algoritma Özellikleri
 
-- Her algoritmanın başlangıç ve bitiş noktası vardır. Sonlu adımlar arasında tanımlanırlar. Kimi algoritmalar problemi n adımda çözerken kimi algoritmalar n<sup>2</sup> adımda çözer.
+> - Her algoritmanın başlangıç ve bitiş noktası vardır. Sonlu adımlar arasında tanımlanırlar. Kimi algoritmalar problemi n adımda çözerken kimi algoritmalar n<sup>2</sup> adımda çözer.
 
-- Hesaplamalar, veri işleme, otomatik akıl yürütme ve diğer görevleri gerçekleştirmek için algoritmalar özel olarak tanımlanmış **sistematik adımları** içerir.
+> - Hesaplamalar, veri işleme, otomatik akıl yürütme ve diğer görevleri gerçekleştirmek için algoritmalar özel olarak tanımlanmış **sistematik adımları** içerir.
 
 ✨ *Etkili bir algoritma, mevcut **donanım kaynaklarını** dikkate alarak, **sınırlı bir alan** ve **zaman** içinde tanımlı problem için bir çözüm üretebilmelidir.*
 
-- Algoritmaların verimli bir şekilde çalışması için çoğu zaman **başlangıç koşulları ve ilk girişlerin değerleri** belirtilir.
+> - Algoritmaların verimli bir şekilde çalışması için çoğu zaman **başlangıç koşulları ve ilk girişlerin değerleri** belirtilir.
 
-- Algoritma içeriğinde aritmetik ve mantıksal adımlar bulundurabilir. Matematiksel açıdan, algoritmalara bir prosedür ya da fonksiyon gözü ile bakılabilir.
+> - Algoritma içeriğinde aritmetik ve mantıksal adımlar bulundurabilir. Matematiksel açıdan, algoritmalara bir prosedür ya da fonksiyon gözü ile bakılabilir.
 
 ## Akış Şeması
 
 Algoritmaların anlaşılmalarını kolaylaştırmak üzere bir takım bloklar kullanılmaktadır. Bu bloklar bütününe akış şeması denilmektedir.
 
 ![Akış Şeması](./img/temelAkis.drawio.png)
+
 *<span style="color: gray">Şema-1</span>*
 *Şema-1 drawio ile çizilmiştir.*
 
