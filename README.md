@@ -19,3 +19,26 @@
 - Algoritmaların verimli bir şekilde çalışması için çoğu zaman **başlangıç koşulları ve ilk girişlerin değerleri** belirtilir.
 
 - Algoritma içeriğinde aritmetik ve mantıksal adımlar bulundurabilir. Matematiksel açıdan, algoritmalara bir prosedür ya da fonksiyon gözü ile bakılabilir.
+
+## Akış Şeması
+
+Algoritmaların anlaşılmalarını kolaylaştırmak üzere bir takım bloklar kullanılmaktadır. Bu bloklar bütününe akış şeması denilmektedir.
+
+![Akış Şeması](./img/temelAkis.drawio.png)
+*<span style="color: gray">Şema-1</span>*
+*Şema-1 drawio ile çizilmiştir.*
+
+Örnek bir akış şeması inceleyelim.
+
+![Örnek Bir Akış Şeması](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/LampFlowchart_tr.svg/240px-LampFlowchart_tr.svg.png)
+
+
+*<span style="color: gray">Şema-2</span>*
+*Şema-2 Örnek akış şeması görseli wikipedia'dan alınmıştır.*
+
+İki sayının toplanmasını içeren bir algoritma şeması hazırlayalım.
+
+![İki Sayının Toplanması](./img/akisSemasiOrnek1.drawio.png)
+
+*<span style="color: gray">Şema-3</span>*
+*Şema-3 drawio ile çizilmiştir.*
