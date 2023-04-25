@@ -27,6 +27,7 @@ Algoritmaların anlaşılmalarını kolaylaştırmak üzere bir takım bloklar k
 ![Akış Şeması](./img/temelAkis.drawio.png)
 
 *<span style="color: gray">Şema-1</span>*
+
 *Şema-1 drawio ile çizilmiştir.*
 
 Örnek bir akış şeması inceleyelim.
@@ -35,6 +36,7 @@ Algoritmaların anlaşılmalarını kolaylaştırmak üzere bir takım bloklar k
 
 
 *<span style="color: gray">Şema-2</span>*
+
 *Şema-2 Örnek akış şeması görseli wikipedia'dan alınmıştır.*
 
 İki sayının toplanmasını içeren bir algoritma şeması hazırlayalım.
@@ -42,4 +44,5 @@ Algoritmaların anlaşılmalarını kolaylaştırmak üzere bir takım bloklar k
 ![İki Sayının Toplanması](./img/akisSemasiOrnek1.drawio.png)
 
 *<span style="color: gray">Şema-3</span>*
+
 *Şema-3 drawio ile çizilmiştir.*
