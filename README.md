@@ -46,3 +46,11 @@ Algoritmaların anlaşılmalarını kolaylaştırmak üzere bir takım bloklar k
 *<span style="color: gray">Şema-3</span>*
 
 *Şema-3 drawio ile çizilmiştir.*
+
+Aylık geliri 5000 lira, aylık gideri 7500 lira olan bir kişinin aylık kâr zarar algoritma şemasını hazırlayalım.
+
+![İki Sayının Toplanması](./img/AkisSemasiOrnekleri.drawio.png)
+
+*<span style="color: gray">Şema-4</span>*
+
+*Şema-4 drawio ile çizilmiştir.*
