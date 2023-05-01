@@ -62,3 +62,63 @@ Bir temizlik robotunun akış şemasını hazırlayalım.
 *<span style="color: gray">Şema-5</span>*
 
 *Şema-5 drawio ile çizilmiştir.*
+
+
+
+## Kaba Kod (Pseudo Code)
+
+- Programcılar sıklıkla algoritmaları, **yalnızca insan gözlerine yönelik bir şekilde** tanımlamak isterler.
+
+- Bu tanımlamalar **bilgisayar programı ya da bir akış şeması** değildir. Daha çok **yapılandırılmış bir metin tanımıdır.**
+
+- Bu tanımlamalar veri yapısının ya da algoritmanın **üst düzey analizini** kolaylaştırır.
+
+- Bir kaba kod yazarken bu kodun **makinelerin değil**, insanların okuyacağı unutulmamalıdır.
+
+- **Anlaşılırlık yüksek seviyede tutulmalı**, teknik detaylardan kaçınılmalıdır.
+
+Bir örnekle kaba kodu pekiştirelim.
+
+1'den n'e kadar olan sayıları ekrana yazdıran algoritmanın kaba kodlarını yazalım.
+
+```
+Algoritma ekranaYaz(n)
+Giriş: Limit değerini temsil eden n sayısı
+Çıkış: Değer yok
+n değerini oku
+i = 0
+Koşul belirle i <= n
+i ekrana yaz
+i'nin değerini 1 arttır
+...
+ekranaYaz(5)
+Başla
+i = 0
+i <= 5 evet
+0
+
+i = 1
+i <= 5 evet
+1
+
+i = 2
+i <= 5 evet
+2
+
+i = 3
+i <= 5 evet
+3
+
+i = 4
+i <= 5 evet
+4
+
+i = 5
+i <= 5 evet
+5
+
+i = 6
+i <= 5 hayır
+5
+Son
+```
