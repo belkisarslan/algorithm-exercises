@@ -122,3 +122,28 @@ i <= 5 hayır
 5
 Son
 ```
+
+## Algoritmanın Morfolojisi
+
+- Bir değişken bilgisayar hafızasında bir değeri depolamak ve ihtiyaç halinde okumak üzere ayrılmış olan belirli bir yeri ya da alanı işaret eder.
+
+- Bir değişkenin veri türü değişkenin alabileceği, sınırları belirli ve değişken türüne bağlı olarak kendisi için ayrılmış olan alanı gösterir.
+
+- Bir ifade veya bir kod satırı algoritmada izlenecek tek bir adımı tanımlamak üzere kullanılır.
+
+Bir algoritmada temelde üç blok halinde düşünülebilir. **Giriş**, **işleme**, **çıkış** şeklinde özetlenebilir.
+
+- Giriş seti içerisindeki veriler bir ses kaydı, bir imge, bir metin ya da benzer bir ifade olabilir.
+
+- İşleme blogu algoritmaya ait tanımlı prosedürlerin ardışık bir şekilde işlenmesini sağlar.
+
+- Çıkış seti ise verilen girdiye bağlı olarak üretilen çıktıyı temsil eder.
+
+Bir problemin çözümünü sağlamak üzere algoritmanın işlem bileşenleri:
+
+- Atama ifadeleri
+- Aritmetik işlemler
+- Mantıksal ifadeler
+- Döngüler
+- Veri yapıları ve organizasyonu
+- Yazma ve okuma prosedürleri
