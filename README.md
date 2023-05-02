@@ -147,3 +147,35 @@ Bir problemin çözümünü sağlamak üzere algoritmanın işlem bileşenleri:
 - Döngüler
 - Veri yapıları ve organizasyonu
 - Yazma ve okuma prosedürleri
+
+## Algoritma Türleri
+
+- Algoritma prosedürleri işletme şekillerine göre kategorilere ayrılabilirler.
+
+- Bu farklı kategoriler algoritmaların çalışma şekillerine ve yapılarına yansımaktadır.
+
+![Algoritma Types](./img/algorithmtypes.drawio.png)
+
+*<span style="color: gray">Şema-6</span>*
+
+*Şema-6 drawio ile çizilmiştir.*
+
+- Direkt Algoritmalar
+
+Algoritmaların en temel çalışma bileşenlerinden biri iterasyonlardır. İterasyon, belirli koşullar altında kendini tekrar eden kod blokları olarak ifade edilebilir. İterasyonlarla **çalışmayan** algoritmalar direkt algoritmalar olarak isimlendirilir. Örn: ikinci dereceden denklem çözümleri
+
+- Ardışık Algoritmalar
+
+Direkt algoritmaların aksine amaçlanan problemin çözümünü yerine getirmek üzere pek çok algoritma ardışık olarak çalışır ve bu algoritmalar ardışık algoritmalar olarak adlandırılır. Örn: faktöriyel hesapları
+
+- Yakınsak Algoritmalar
+
+Aranılan çözüme doğru yakınsayan ardışık algoritmalardır. Bazı yakınsak algoritmalar kesin çözümü elde edemezler fakat bu çözüme yaklaşık bir değeri kesin çözüm alırlar. Yaklaşık algoritmalar sonlu değillerdir; fakat her bir ileri iterasyon onları kesin çözüme biraz daha yaklaştırır. Yaklaşık algoritmalara değişken kesen metodu, arama teknikleri vb. örnekler verilebilir.
+
+- Sonlu Algoritmalar
+
+İterasyonların sonlu bir sayısında kesin çözümü garanti eden yakınsak algoritmalardır, yol yapılı ve ağaç yapılı olarak ikiye ayrılırlar. 
+
+**Yol Yapılı** algoritmaların pek çoğu yol yapısına sahiptir. Bu yol yapısında bir iterasyon bir önceki iterasyonu iterasyon dizilerinde farklı dallar üretmeksizin takip eder.
+
+**Ağaç Yapılı** algoritmalar diğer sonlu algoritmalarda iterasyon  dizileri, pek çok paralel dalları içeren bir ağaç şeklindedir. Birçok ağaç arama algoritmaları bu sınıfa aittir.
