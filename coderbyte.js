@@ -17,3 +17,17 @@ const userValidation = (str) => {
   }
 }
 console.log(userValidation("u__hello_world123"))
+
+// longestWord
+/*
+1. Noktalama işaretlerini kaldır.
+2. Cümleyi boşluklardan bölüp kelimelerle bir array oluştur.
+3. Kelimelerle oluşturduğun arrayi kelimelerin karakter sayılarına göre azalan bir şekilde sırala
+4. En başta yani 0 indekste yer alan kelimeyi return et.
+*/
+const longestWord = (src) => {
+  const arr = src.replace(/[^a-zA-Z ]/g, "").split(" ")
+  arr.sort((a, b) => {return b.length - a.length})
+  return arr[0]
+}
+console.log(longestWord("fun&!! time"))
