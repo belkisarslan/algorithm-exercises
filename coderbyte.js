@@ -31,3 +31,13 @@ const longestWord = (src) => {
   return arr[0]
 }
 console.log(longestWord("fun&!! time"))
+
+// firstFactorial
+const firstFactorial = (num) => {
+  let factoriel = 1
+  for(let i=1; i <= num; i++){
+    factoriel *= i
+  }
+  return factoriel
+}
+console.log(firstFactorial(5))
