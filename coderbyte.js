@@ -41,3 +41,9 @@ const firstFactorial = (num) => {
   return factoriel
 }
 console.log(firstFactorial(5))
+
+//firstReverse
+const firstReverse = (str) => {
+ return str.split("").reverse().join("")
+}
+console.log(firstReverse("ters çevrilen yazı"))
