@@ -71,3 +71,8 @@ const findIntersection = (arr) => {
  }
 }
 console.log(findIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]))
+
+//Bu çok güzel bir örnek!!!
+var str = '  A B  C   D EF ';
+console.log(str.replace(/\s/g, '#'));  // ##A#B##C###D#EF#
+console.log(str.replace(/\s+/g, '#')); // #A#B#C#D#EF#
