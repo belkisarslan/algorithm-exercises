@@ -47,3 +47,27 @@ const firstReverse = (str) => {
  return str.split("").reverse().join("")
 }
 console.log(firstReverse("ters çevrilen yazı"))
+
+// findIntersection
+/*
+1. Yeni bir array tipinde değişken tanımla
+2. split(), replace()
+3. forEach() kullanarak bütün array içerisindeki karakterlerin diğer array içerisinde olup olmadığını kontrol et.
+4. Eğer tanımlamış olduğumuz array boşsa return false, boş değilse de array içerisindeki değerleri string halinde return et.
+*/
+const findIntersection = (arr) => {
+ let intersection = []
+ const array1 = arr[0].replace(/\s/g,"").split(",")
+ const array2 = arr[1].replace(/\s/g,"").split(",")
+ array2.forEach((item) => {
+  if(array1.includes(item)){
+    intersection.push(item)
+  }
+ })
+ if(intersection.length != 0){
+  return intersection.toString()
+ }else{
+  return false
+ }
+}
+console.log(findIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]))
