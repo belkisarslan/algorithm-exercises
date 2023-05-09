@@ -111,3 +111,30 @@ const questionMark = (str) => {
  return sums.includes(10) ? true : false
 }
 console.log(questionMark("acc?7??sss?3rr1??????5"))
+
+//letterChange
+//Verilen string'in harflerini alfabeye göre bir sonra gelen harfle değiştirilmesi istenmektedir
+console.log("A".charCodeAt()) //65
+console.log("a".charCodeAt()) //97
+//Bu nedenle ilk önce bütün harfleri küçük harfe çevirmeliyiz
+console.log(String.fromCharCode("A".charCodeAt() + 1)) //B
+/*
+1. Harfleri küçük harfe çevir
+2. z harfinden sonra a harfine dönmeli
+3. Son olarak sesli harfleri büyü harf yapıyoruz
+*/
+const letterChange = (str) => {
+ let newStr = str.toLowerCase().replace(/[a-z]/gi, (char)=>{
+  if(char === "z"){
+    return "a"
+  }else{
+    return String.fromCharCode(char.charCodeAt() + 1)
+  }
+ })
+ let vowelCapitalize = newStr.replace(/a|e|i|o|u/gi, char =>
+  char.toUpperCase()
+ )
+ return vowelCapitalize
+}
+console.log(letterChange("abcde"))
+
