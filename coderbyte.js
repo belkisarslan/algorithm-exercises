@@ -138,3 +138,19 @@ const letterChange = (str) => {
 }
 console.log(letterChange("abcde"))
 
+//aynı soruda harfler dışında başka karakterin görünmesini istemezsek 
+const letterChange2 = (str) => {
+  let clearstr = str.replace(/[^a-zA-Z]/g, "")
+  let newStr = clearstr.toLowerCase().replace(/[a-z]/gi, (char) => {
+        if (char === "z") {
+            return "a"
+        } else {
+            return String.fromCharCode(char.charCodeAt() + 1)
+        }
+    })
+    let vowelCapitalize = newStr.replace(/a|e|i|o|u/gi, char =>
+  char.toUpperCase()
+ )
+ return vowelCapitalize
+}
+console.log(letterChange2("abcde!?e12h"))
