@@ -154,3 +154,13 @@ const letterChange2 = (str) => {
  return vowelCapitalize
 }
 console.log(letterChange2("abcde!?e12h"))
+
+//simpleAdding
+const simpleAdding = (num) => {
+let result = 0
+for(let i=1; i<=num; i++){
+ result += i
+}
+ return result
+}
+console.log(simpleAdding(5))
