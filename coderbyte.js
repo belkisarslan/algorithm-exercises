@@ -76,3 +76,38 @@ console.log(findIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"]))
 var str = '  A B  C   D EF ';
 console.log(str.replace(/\s/g, '#'));  // ##A#B##C###D#EF#
 console.log(str.replace(/\s+/g, '#')); // #A#B#C#D#EF#
+
+//questionMark
+//İçinde sadece harf rakam ve soru işareti bulunan string'in ??? arasındaki sayıların toplamı 10 ise true
+//toplamları 10 değilse false döndür
+/*
+1. str >= 5 
+2. soru işareti ve rakam olmayan büytün değerleri temizle
+3. forEach için stringleri arraye çevir
+4. forEach içinde kullanılacak değerleri tanımla
+5. forEach döngüsü ile her bir rakam ve kendisinden sonraki 4. karakterin toplanarak değişkene eklenmesi 
+ve değerin arraye eklenmesi
+6. array içinde 10 değeri varsa true yoksa false
+*/
+const questionMark = (str) => {
+ if(str.length < 5){
+  return false
+ }
+ const newStr = str.replace(/[^0-9?]/g, "")
+ const arr = newStr.split("")
+ let sums = []
+ let sum = 0
+ let iterator = 0
+ arr.forEach((item) => {
+  if(item != "?"){
+    sum = parseInt(item) + parseInt(arr[iterator + 4])
+    sums.push(sum)
+  }
+  iterator += 1
+ })
+ console.log(str) //acc?7??sss?3rr1??????5
+ console.log(newStr) //"?7???31??????5"
+ console.log(sums) // (4) [10, NaN, NaN, NaN]
+ return sums.includes(10) ? true : false
+}
+console.log(questionMark("acc?7??sss?3rr1??????5"))
