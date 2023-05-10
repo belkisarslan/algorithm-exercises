@@ -181,3 +181,50 @@ const letterCapitalize2 = (str) => {
   return  arr.map((item) => (item.charAt(0).toUpperCase() + item.slice(1, item.length))).join(" ") 
 }
 console.log(letterCapitalize2("bu cümlede geçen bütün harflerin kelimelerinin baş harfini büyük yap"))
+
+//simpleSymbols
+const simpleSymbols = (str) => {
+ const arr = str.split('')
+ let controlArr = []
+ arr.forEach(char => {
+  if((/[a-zA-Z]/).test(char)){
+    if(arr[arr.indexOf(char)-1] === '+' && arr[arr.indexOf(char)+1] === '+'){
+      controlArr.push(1)
+    }else{
+      controlArr.push(0)
+    }
+  }
+ })
+ console.log(controlArr)
+ if(controlArr.includes(0)){
+  return false
+ }else{
+  return true
+}
+}
+console.log(simpleSymbols('++d+===+c++==a'))
+
+//charAt methodu ile çözümü
+const SimpleSymbols2 = (str) => {
+  const arr = str.split("")
+  let controlArr = []
+
+  for (let i = 0; i <= arr.length; i++) {
+    if (str.charAt(i).match(/[a-z]/i)) {
+      if (str.charAt(i + 1) === "+" && str.charAt(i - 1) === "+") {
+        controlArr.push(1)
+      } else {
+        controlArr.push(0)
+      }
+    }
+  }
+  console.log(controlArr)
+    
+    if (controlArr.includes(0)) {
+        return false
+    }
+
+  return true
+}
+console.log(SimpleSymbols2('++d+===+c++==a'))
+
