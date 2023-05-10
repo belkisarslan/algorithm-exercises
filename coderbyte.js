@@ -164,3 +164,20 @@ for(let i=1; i<=num; i++){
  return result
 }
 console.log(simpleAdding(5))
+
+//letterCapitalize
+const letterCapitalize = (str) => {
+  let newStr = []
+  str.split(" ").forEach((word) => {
+    newStr.push(word.charAt(0).toUpperCase() + word.slice(1, word.length))
+  })
+ return newStr.join(' ')
+}
+console.log(letterCapitalize("bu cümlede geçen bütün harflerin kelimelerinin baş harfini büyük yap"))
+
+//map ile çözüm
+const letterCapitalize2 = (str) => {
+  let arr = str.split(" ")
+  return  arr.map((item) => (item.charAt(0).toUpperCase() + item.slice(1, item.length))).join(" ") 
+}
+console.log(letterCapitalize2("bu cümlede geçen bütün harflerin kelimelerinin baş harfini büyük yap"))
