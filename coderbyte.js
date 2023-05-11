@@ -266,3 +266,14 @@ let newStr = str.search('a...b')
 return newStr > -1 ? true : false
 }
 console.log(abCheck2("lane borrowed"))
+
+//exOh
+const exOh = (str) => {
+let x = 0
+let o = 0;
+[...str].forEach((item)=>{
+item === 'x' ? x += 1 : o += 1
+})
+return x == o ? true : false 
+}
+console.log(exOh("oooxxxoxox"))
