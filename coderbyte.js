@@ -277,3 +277,10 @@ item === 'x' ? x += 1 : o += 1
 return x == o ? true : false 
 }
 console.log(exOh("oooxxxoxox"))
+
+//wordCout
+const wordCout = (str) => {
+return str.trim().split(' ').length
+}
+//başta boşluk varken bile kelimeleri sayması için trim() kullandık
+console.log(wordCout(" Cümledeki kelime adedini döndür"))
