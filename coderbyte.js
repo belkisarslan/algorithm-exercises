@@ -284,3 +284,23 @@ return str.trim().split(' ').length
 }
 //başta boşluk varken bile kelimeleri sayması için trim() kullandık
 console.log(wordCout(" Cümledeki kelime adedini döndür"))
+
+//vowelCount
+const vowelCount = (str) => {
+let chars = 0;
+[...str].forEach((char) => {
+if((/[a/e/i/o/u/A/E/I/O/U]/).test(char)){
+chars += 1
+}
+})
+return chars
+}
+console.log(vowelCount("kelimelerdeki sesli harfleri say"))
+
+//ikinci çözüm
+const vowelCount2 = (str)=>{
+  let newStr=str.toLowerCase();
+   let arr = newStr.replace(/[^a/e/i/o/u]/g,"")
+   return arr.length 
+  }
+console.log(vowelCount2("kelimelerdeki sesli harfleri say"))
