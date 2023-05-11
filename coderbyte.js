@@ -235,3 +235,12 @@ const timeConvert = (num) => {
  return `${Math.floor(hour)}:${min}`
 }
 console.log(timeConvert(63))
+
+//alphabetSoup
+const alphabetSoup = (str) => {
+ 
+ const newStr = str.replace(/[^a-z]/gi, "")
+ 
+ return newStr.split('').sort().join('')
+}
+console.log(alphabetSoup("merha!ba"))
