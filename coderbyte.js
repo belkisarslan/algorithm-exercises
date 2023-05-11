@@ -244,3 +244,25 @@ const alphabetSoup = (str) => {
  return newStr.split('').sort().join('')
 }
 console.log(alphabetSoup("merha!ba"))
+
+//abCheck
+/*
+a harfinden 3 karakter sonra b harfi geliyorsa true dön
+*/
+const abCheck = (str) => {
+ let arr = []
+ let newStr = str.split('')
+ newStr.forEach((char)=> {
+  if(char === 'a' && newStr[newStr.indexOf(char)+4] === 'b'){
+   return arr.push(true)
+  }
+ })
+ return arr.includes(true) ? true : false
+}
+console.log(abCheck("lane borrowed"))
+//2.yöntem
+const abCheck2 = (str) => {
+let newStr = str.search('a...b')
+return newStr > -1 ? true : false
+}
+console.log(abCheck2("lane borrowed"))
