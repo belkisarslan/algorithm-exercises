@@ -228,3 +228,10 @@ const SimpleSymbols2 = (str) => {
 }
 console.log(SimpleSymbols2('++d+===+c++==a'))
 
+//timeConvert
+const timeConvert = (num) => {
+ let hour = num / 60
+ let min = num % 60
+ return `${Math.floor(hour)}:${min}`
+}
+console.log(timeConvert(63))
