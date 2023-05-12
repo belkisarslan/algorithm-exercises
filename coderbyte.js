@@ -304,3 +304,11 @@ const vowelCount2 = (str)=>{
    return arr.length 
   }
 console.log(vowelCount2("kelimelerdeki sesli harfleri say"))
+
+//isPalindrome
+const isPalindrome = (str) => {
+let newStr = str.replace(/ /g, "")
+let reverseStr = newStr.split('').reverse().join('')
+return newStr === reverseStr ? true : false
+}
+console.log(isPalindrome("al kasada sakla"))
