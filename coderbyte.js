@@ -312,3 +312,29 @@ let reverseStr = newStr.split('').reverse().join('')
 return newStr === reverseStr ? true : false
 }
 console.log(isPalindrome("al kasada sakla"))
+
+//aritGeo
+const aritGeo = (arr) => {
+let arit = arr[1] - arr[0]
+let geo = arr[1] / arr[0]
+let isArithmetic = true
+let isGeometric = true
+
+for(let i=2; i<arr.length; i++){
+  if(arr[i] - arr[i-1] != arit){
+    isArithmetic = false
+  }
+  if(arr[i] / arr[i-1] != geo){
+    isGeometric = false
+  }
+}
+
+if(isArithmetic === true){
+  return "Arithmetic"
+}else if(isGeometric === true){
+  return "Geometric"
+}else{
+  return -1
+}
+}
+console.log(aritGeo([2, 4, 8]))
