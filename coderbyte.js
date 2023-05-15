@@ -338,3 +338,15 @@ if(isArithmetic === true){
 }
 }
 console.log(aritGeo([2, 4, 8]))
+
+//arrayAddition
+const arrayAddition = (arr) => {
+arr.sort((a, b) => a-b)
+let endChar = arr[arr.length - 1]
+let result = 0
+for(let i=0; i<arr.length - 1; i++){
+  result += arr[i]
+}
+return result === endChar ? true : false
+}
+console.log(arrayAddition([4, 6, 23, 10, 1, 3]))
