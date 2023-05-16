@@ -382,3 +382,19 @@ return maxValue < 2 ? -1 :
 ? arr[maxFrequencies.indexOf(maxValue)] : -1)
 }
 console.log(letterCount("Today is the greatest day ever"))
+
+//secondGreatLow
+/*
+en büyük ikinci değer ve en küçük ikinci değeri bul
+birden fazla kullanılmış sayıları diziden çıkar
+küçükten büyüğe sırala
+*/
+const secondGreatLow = (arr) => {
+newArr = []
+arr.forEach((num)=> {
+!newArr.includes(num) && newArr.push(num)
+})
+newArr.sort((a, b) => a - b)
+return `${newArr[1]} - ${newArr[newArr.length - 2]}`
+}
+console.log(secondGreatLow([7, 7, 12, 98, 106]))
