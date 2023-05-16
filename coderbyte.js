@@ -354,3 +354,31 @@ console.log(arrayAddition([4, 6, 23, 10, 1, 3]))
 //console style
 console.log("%cConsole Style Örneği", "color:red;font-size:25px")
 console.log("%cBöyle %crengarenk %cde %cyapılabilir", "color:purple;font-size:20px", "color:blue;font-size:20px", "color:green;font-size:20px", "color:orange;font-size:20px")
+
+//letterCount
+/*
+her kelimede tekrar eden harf sayısına bakacağımız için kelime kelime incelemeliyiz
+harf ve boşluk dışındaki karakterleri sil
+hepsini küçük harf yap
+stringi array yap
+*/
+const letterCount = (str) => {
+let arr = str.replace(/^a-zA-Z/g, "").toLowerCase().split(" ")
+let charsOfWords = []
+for(let i=0; i<arr.length; i++){
+  let obj = []
+  arr[i].split("").forEach((char) => {
+    char in obj ? obj[char] += 1 : obj[char] = 1
+  })
+  charsOfWords.push(obj)
+}
+let maxFrequencies = []
+charsOfWords.forEach((object) => {
+  maxFrequencies.push(Math.max(...Object.values(object)))
+})
+let maxValue = Math.max(...maxFrequencies)
+return maxValue < 2 ? -1 :
+(arr[maxFrequencies.indexOf(maxValue)]
+? arr[maxFrequencies.indexOf(maxValue)] : -1)
+}
+console.log(letterCount("Today is the greatest day ever"))
