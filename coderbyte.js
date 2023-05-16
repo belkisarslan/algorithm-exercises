@@ -350,3 +350,7 @@ for(let i=0; i<arr.length - 1; i++){
 return result === endChar ? true : false
 }
 console.log(arrayAddition([4, 6, 23, 10, 1, 3]))
+
+//console style
+console.log("%cConsole Style Örneği", "color:red;font-size:25px")
+console.log("%cBöyle %crengarenk %cde %cyapılabilir", "color:purple;font-size:20px", "color:blue;font-size:20px", "color:green;font-size:20px", "color:orange;font-size:20px")
