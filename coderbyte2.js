@@ -95,3 +95,38 @@ str.split("").forEach((element)=> {
 return newArr.join("")
 }
 console.log(swapCase("Hello World"))
+
+//numberAddition
+const numberAddition = (str) => {
+let strArr = str.split("")
+let numberArr = []
+for(let i = 0; i < strArr.length; i++ ){
+    let lastIndex = numberArr.length - 1
+
+    //rakam dışındaki karakterleri direkt gönder
+    if((/[^0-9]/).test(strArr[i])){
+        numberArr.push(strArr[i])
+    }else{
+        //eğer yeni oluşturduğumuz dizini içi boşsa yine direkt gönder
+        if(numberArr.length === 0){
+        numberArr.push(strArr[i]) 
+        //eğer yeni oluşturduğumuz dizinin son elemanı rakamsa
+        }else if((/[0-9]/).test(numberArr[lastIndex])){
+        numberArr[lastIndex] += strArr[i]
+        //eğer yeni oluşturduğumuz dizini son elemanı rakam değilse
+        }else if((/[^0-9]/).test(numberArr[lastIndex])){
+        numberArr.push(strArr[i])
+        }
+    }
+}
+return calculateSum(numberArr)
+}
+const calculateSum = (arr) => {
+let sum = 0
+for(let j = 0; j<arr.length; j++){
+    //bir ve birden fazla basamağa sahip sayı ise
+    if(arr[j].match(/\d+/)) sum += parseInt(arr[j])
+}
+return sum
+}
+console.log(numberAddition("88Hello 3World!"))
