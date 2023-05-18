@@ -62,3 +62,20 @@ const iterateOverObj = (freq, max) => {
 }
 
 console.log(meanMode([5, 3, 3, 3, 3, 3, 1]))
+
+//dashInsert
+//ard arda kullanılan tek sayıların arasına "-" koy
+// çok güzel bi foreach örneği sonra yine bak buna !
+const dashInsert = (str) => {
+    let strArr = str.split("")
+    let totalstr = ""
+    strArr.forEach((element,index,arr) => {
+        totalstr += element
+        if (index + 1 == arr.length ) return totalstr
+        if ( parseInt(element) && element % 2 == 1 && arr[index+1] % 2 == 1){
+            totalstr += "-"
+        }
+    });
+    return totalstr
+}
+console.log(dashInsert("454793c13"))
