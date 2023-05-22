@@ -156,3 +156,27 @@ const sum = (n) => {
     return sum
 }
 console.log(additivePersistence(2718))
+
+//multiplicativePersistence
+const multiplicativePersistence = (num) => {
+
+
+let multiNum = multi(num)
+let steps = 1
+
+while(multiNum > 9){
+steps++
+multiNum = multi(multiNum)
+}
+return `step: ${steps} - multi: ${multiNum}`
+}
+
+const multi = (n) => {
+    let multi = 1
+    const arr = n.toString().split("")
+    for(let i = 0; i < arr.length; i++){
+        multi *= parseInt(arr[i])
+    }
+    return multi
+}
+console.log(multiplicativePersistence(39))
