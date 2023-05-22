@@ -130,3 +130,29 @@ for(let j = 0; j<arr.length; j++){
 return sum
 }
 console.log(numberAddition("88Hello 3World!"))
+
+//additivePersistence
+const additivePersistence = (num) => {
+//eğer verilen parametre bir rakamsa 0 dön
+if(num<10) return 0
+
+//verilen parametrenin rakamları toplamı hesapla
+let sumNum = sum(num)
+let steps = 1
+
+while(sumNum > 9){
+steps++
+sumNum = sum(sumNum)
+}
+return `step: ${steps} - sum: ${sumNum}`
+}
+
+const sum = (n) => {
+    let sum = 0
+    const arr = n.toString().split("")
+    for(let i = 0; i < arr.length; i++){
+        sum += parseInt(arr[i])
+    }
+    return sum
+}
+console.log(additivePersistence(2718))
