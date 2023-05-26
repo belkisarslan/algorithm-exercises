@@ -180,3 +180,36 @@ const multi = (n) => {
     return multi
 }
 console.log(multiplicativePersistence(39))
+
+//changingSequence
+/*
+dizide verilen rakamların artış ve azalış eğiliminin değiştiği indexe ulaşmamız istenmektedir
+örneğin dizi 1 2 3 4 şeklinde artarak giderken bir anda 3 2 1 şeklinde azalmaya başlarsa ya da tam tersi
+9 8 7 6 7 8 9 azalarak giderken bir anda artmaya başladığı indexe ulaşmaya çalışıyoruz
+*/
+const changingSequence = (arr) => {
+let newArr = []
+let tendency = "increasing"
+
+for(let i=1; i<arr.length; i++ ){
+    newArr.push(arr[i] - arr[i-1])
+}
+
+if(newArr[0] < 0) tendency = "decreasing"
+
+if(tendency === "increasing"){
+    for(let i=0; i<newArr.length; i++){
+        if(newArr[i] < 1) return i
+    }
+}
+
+if(tendency === "decreasing"){
+    for(let i=0; i<newArr.length; i++){
+        if(newArr[i] > 0) return i
+    }
+}
+return -1
+}
+console.log(changingSequence([1, 2, 4, 6, 4, 3, 2, 1]))
+console.log(changingSequence([10, 9, 8, 7, 6, 7, 8, 9]))
+console.log(changingSequence([1, 2, 3, 4]))
