@@ -213,3 +213,31 @@ return -1
 console.log(changingSequence([1, 2, 4, 6, 4, 3, 2, 1]))
 console.log(changingSequence([10, 9, 8, 7, 6, 7, 8, 9]))
 console.log(changingSequence([1, 2, 3, 4]))
+
+//overlappingRanges
+/*
+Verilen arrayin 0. ve 1. indexleri aralığındaki rakamlar ve
+2. ve 3. indexleri aralığındaki rakamların kesişim kümesinin eleman sayısı 
+arrayin 4. indexine eşitse true dön değilse falde dön
+Yani [4, 5, 6, 7, 8, 9, 10] ve [2, 3, 4, 5, 6] kesişim sayıları arrayin en sonunda bulunan
+[3] e eşit mi?
+*/
+const overlappingRanges = (arr) => {
+    const firstSet = createArr(arr[0],arr[1])
+    const secondSet = createArr(arr[2],arr[3])
+    
+    let intersectionSet = []
+
+    firstSet.map(item => {
+        if(secondSet.indexOf(item) > -1 ) intersectionSet.push(item)
+    })
+    return intersectionSet.length >= arr[4] ? true : false
+}
+const createArr = (x, y) => {
+    let subSet = []
+    for(let i = x; i <= y; i++){
+        subSet.push(i)
+    }
+    return subSet
+}
+console.log(overlappingRanges([4, 10, 2, 6, 3]))
