@@ -241,3 +241,25 @@ const createArr = (x, y) => {
     return subSet
 }
 console.log(overlappingRanges([4, 10, 2, 6, 3]))
+
+//superIncreasing
+/*
+Her index kendinden önceki indexlerin toplamından büyük ise true
+değil ise false dön
+*/
+const superIncreasing = (arr) => {
+    for(let i = 1; i<arr.length ; i++){
+        let sum = sumOfSubsets(arr, i)
+        console.log(`${arr[i]} - ${sum}`)
+        if(sum >= arr[i]) return false
+    }
+  return true
+}
+const sumOfSubsets = (arr, index) => {
+    let sum = 0
+    for(let j=0; j<index; j++){
+        sum += arr[j]
+    }
+    return sum
+}
+console.log(superIncreasing([1, 3, 6, 13, 54]))
