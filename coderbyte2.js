@@ -263,3 +263,16 @@ const sumOfSubsets = (arr, index) => {
     return sum
 }
 console.log(superIncreasing([1, 3, 6, 13, 54]))
+
+//hammingDistance
+//Verilen iki değerin indexlerini karşılaştır ve farklı olan değer sayısını dön
+const hammingDistance = (p1, p2) => {
+    let hamm = 0
+    for(let i=0; i<p1.length; i++){
+        if(p1[i] != p2[i]) hamm += 1
+    }
+    return hamm
+
+}
+console.log(hammingDistance("karoline", "kathrine"))
+console.log(hammingDistance("0000", "1111"))
