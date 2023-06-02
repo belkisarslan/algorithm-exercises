@@ -302,3 +302,16 @@ const bitWise = (arr) => {
 
 }
 console.log(bitWise(["1100", "0111"]))
+
+//wavesorting
+const waveSorting = (arr) => {
+ const sortedArr = arr.sort((a, b) => a-b)
+ let newArr = []
+ for(let i = 0; i<sortedArr.length; i +=2){
+    newArr.push(sortedArr[i+1])
+    newArr.push(sortedArr[i])
+ }
+ 
+ return newArr
+}
+console.log(waveSorting([3, 6, 5, 10, 20, 7]))
