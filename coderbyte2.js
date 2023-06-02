@@ -276,3 +276,29 @@ const hammingDistance = (p1, p2) => {
 }
 console.log(hammingDistance("karoline", "kathrine"))
 console.log(hammingDistance("0000", "1111"))
+
+//bitWise
+/*
+verilen iki değerin indexlerini karşılaştır
+karşılaştırılan iki index'ten herhangi biri 1 olması durumunda 1 dön
+değilse 0 dön
+"1100" "0111" => 1111 döner
+"0010" "0110" => 0110 döner
+*/
+const bitWise = (arr) => {
+    const p1 = arr[0]
+    const p2 = arr[1]
+
+    let newBit = ""
+
+    for(let i = 0; i < arr[0].length; i++){
+        if(p1.charAt(i) === "1" || p2.charAt(i) === "1"){
+            newBit += "1"
+        }else{
+            newBit += "0"
+        }
+    }
+    return newBit
+
+}
+console.log(bitWise(["1100", "0111"]))
