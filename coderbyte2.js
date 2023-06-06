@@ -354,3 +354,28 @@ const createArray = (a, b, len, balance="equel") => {
     
 }
 console.log(arrayMatching(["[1, 2, 5, 6]","[5, 2, 8, 11]"]))
+
+//binaryReversal
+/*
+10 tabanlı 47 sayısını 2 tabanlı olarak yaz, 
+ters çevir ve yeni oluşan 2 tabanlı sayıyı 10 tabanlı sayıya dönüştür.
+*/
+const binaryReversal = (str) => {
+    //sayımızı önce iki tabanlı olarak yazdık
+    const binary = Number(str).toString(2)
+    //8 basamaklı olmak zorunda olduğu için 8'den çıkarıyoruz
+    //baştaki 0'ı tek bir 0 olarak gördüğü için repeat kullandık 
+    const binaryWithZeros = ("0".repeat(8-binary.length)) + binary
+    const reversedBinary = binaryWithZeros.split('').reverse().join('')
+
+    //iki tabanli olarak parseinte çevirmek
+    return parseInt(reversedBinary, 2)
+
+}
+console.log(binaryReversal(47))
+/*
+!! küçük bir not
+101111 iki tabanlı sayısını 10 tabanlıya işlem olarak çevirmek
+2^0*1 + 2^1*1 + 2^2*1 + 2^3*1 + 2^4*0 + 2^5*1
+  1   +   2   +   4   +   8   +   0   +   32  =  47 
+*/
