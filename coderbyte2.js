@@ -379,3 +379,66 @@ console.log(binaryReversal(47))
 2^0*1 + 2^1*1 + 2^2*1 + 2^3*1 + 2^4*0 + 2^5*1
   1   +   2   +   4   +   8   +   0   +   32  =  47 
 */
+
+
+//largestPair
+/*
+verilen sayının içinden en büyük iki basamaklı çift sayıyı bulunuz
+*/
+const largestPair = (num) => {
+    //önce sayıyı stringe çevirmeliyiz
+    //ardından iki basamaklı mı sorgusu
+    //ardından ters çevirip her iki değeri de inceleyelim
+    if(num.toString().length === 2){
+        const numR = parseInt(num.toString().split('').reverse().join(''))
+        //bu iki rakamı bir arrayin içine atalım
+        const arr = [num, numR]
+        //teklik ve çiflik durumunu kontrol edelim
+        return (Math.max(...arr)) % 2 === 0
+        ? (Math.max(...arr))
+        : (Math.min(...arr)) %2 === 0 ? Math.min(...arr) :
+        "The number consists only with odd numerics"
+    }
+    //eğer verilen sayı iki basamaktan fazlaysa if blgu çalışmayacaktır
+
+    //iki basamaktan fazla sayılar için yeni senaryo
+    //sayıları stringe çevirip arraye dönüştürelim ve sort ile sıralayalım
+    const arr1 = num.toString().split('')
+    arr1.sort((a, b) => b-a)
+    //onlar basamağı için en büyüğü alalım
+    let tensDigit = arr1[0]
+
+    let unitsDigit = returnUnitsDigit(arr1)
+
+     /*
+    eğer ilk basamaktan sonrası hep tek sayı ise unit'e değer atanamadığı için
+    undefined döner. Bu durumda ilk seçmiş olduğumuz sayı çif ise onu birler basamağına alıp
+    ikinci büyüğü de onlar basamağına almamız lazım
+    */
+
+    if(unitsDigit === undefined){
+        return tensDigit % 2 === 0 
+        ? arr1[1] + tensDigit
+        : "The number consists only with odd numerics"
+    }else{
+        //eğer hiçbir sıkıntı yoksa onlar basamağını ve birler basamağını birleştir
+        return tensDigit + unitsDigit
+    }
+
+
+}
+
+const returnUnitsDigit = (arr) => {
+    let unit;
+    //arrayin ilk elemanını kullandığımız için döngüyü 1den başlatıyoruz
+    for(let i = 1; i<arr.length; i++){
+        if(arr[i] % 2 === 0){
+            unit === undefined ? unit = arr[i] : unit
+        }
+    }
+   
+    return unit
+}
+console.log(largestPair(4759472))
+console.log(largestPair(87531))
+// <3 muhteşem çalışıyor çerçeveletmek istiyorum bu çözümü <3
