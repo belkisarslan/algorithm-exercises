@@ -37,3 +37,23 @@ const twoSum = (nums, target) => {
     return returnValue === '' ? false : returnValue
 }
 console.log(twoSum([2, 7, 11, 15], 9))
+
+//powerSet
+//verilen arrayin alt kümelerini bulunuz
+const powerSet = (arr = []) => {
+    const numberOfSubSet = 2**arr.length
+    let result = []
+    for(let i = 0; i<numberOfSubSet; i++){
+        let tempBinary = Number(i).toString(2)
+        let currentBinary = "0".repeat(arr.length - tempBinary.length) + tempBinary
+        
+        let tempValue = ""
+        for(let j = 0; j<arr.length; j++){
+            if(currentBinary[j] === "1") tempValue += arr[j]
+        }
+        result.push(tempValue)
+    }
+    return result
+
+}
+console.log(powerSet([1, 2, 3]))
