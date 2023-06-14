@@ -313,6 +313,20 @@ return newStr === reverseStr ? true : false
 }
 console.log(isPalindrome("al kasada sakla"))
 
+//isPolindromeTwo
+/*
+Üsteki sorudan farklı olarak verilen cümlede virgül, tire işareti ve 
+büyük harfli karakterler var.
+Yani yukarıdaki çözümden farklı olarak replace methoduyla fazla olan 
+karakterleri yok edeceğiz
+*/
+const isPalindromeTwo = (str) => {
+  let newStr = str.replace(/[^a-zA-Z]/g, "").toLowerCase()
+  let reverseStr = newStr.split('').reverse().join('')
+  return newStr === reverseStr ? true : false
+  }
+  console.log(isPalindromeTwo("Anne, I vote more cars race Rome-to-Vienna"))
+
 //aritGeo
 const aritGeo = (arr) => {
 let arit = arr[1] - arr[0]
