@@ -325,7 +325,54 @@ const isPalindromeTwo = (str) => {
   let reverseStr = newStr.split('').reverse().join('')
   return newStr === reverseStr ? true : false
   }
-  console.log(isPalindromeTwo("Anne, I vote more cars race Rome-to-Vienna"))
+console.log(isPalindromeTwo("Anne, I vote more cars race Rome-to-Vienna"))
+
+//polindromeCreator
+/*
+Verilen değerden 1 veya 2 karakter çıkarılması durumunda
+polindrome olup olmadığının incelenmesi
+*/
+const polindromeCreator = (str) => {
+ const strippedStr = str.replace(/[^a-zA-Z]/g, "").toLowerCase()
+ if(pCreator(strippedStr)) return "The string itself is a palindrome"
+ 
+ let removedLettes = []
+ //uyumu bozan karakter ve yeni array
+ let [removed, newStr] = removeLetter(strippedStr)
+ removedLettes.push(removed)
+
+ //yeni array palindrome ise uyumu bozan karakteri döndür
+ if(pCreator(newStr) === true){
+  return removed
+  //polindrome değilse ikinci kez kontrol yap. çünkü iki harf çıkarma hakkımız var
+ }else{
+  let [removed2, newStr2] = removeLetter(newStr)
+  removedLettes.push(removed2)
+  if(pCreator(newStr2) === true){
+    return removedLettes.join('')
+  }else{
+    return "Not Palindrome Material"
+  }
+ }
+}
+function pCreator(word){
+  return word.split('').reverse().join('') === word ? true : false
+}
+function removeLetter(str){
+  //ortaya kadar kontrol etmemiz yeterli olacaktır
+  let it = Math.floor(str.length/2)
+  let arr = str.split('')
+
+  for(let i = 0; i<it; i++){
+   //en baştaki ve en sondaki eşit değilse
+   if(str[i] != str[str.length-1-i]){
+    arr.splice(i, 1)
+    return [str[i], arr.join('')]
+   }
+  }
+}
+console.log(polindromeCreator("kjjjhjjj"))
+console.log(polindromeCreator("abjchba"))
 
 //aritGeo
 const aritGeo = (arr) => {
