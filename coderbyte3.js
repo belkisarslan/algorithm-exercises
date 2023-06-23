@@ -59,6 +59,25 @@ const twoSum3 = (numArr) => {
  }
  console.log(twoSum3([2, 7, 11, 15]))
 
+ //twoSumAmazon
+ const twoSumAmazon = (numArr, target) => {
+  numArr.sort((a, b) => a - b)
+  let left = 0
+  let right = numArr.length-1
+
+  while(left < right){
+    let currentSum = numArr[left] + numArr[right]
+    if(currentSum > target){
+        right--
+    }else if(currentSum < target){
+        left++
+    }else{
+        return [left, right]
+    }
+  }
+ }
+ console.log(twoSumAmazon([1, 3, 4, 5, 7, 10, 11], 9))
+
 //powerSet
 //verilen arrayin alt kümelerini bulunuz
 const powerSet = (arr = []) => {
