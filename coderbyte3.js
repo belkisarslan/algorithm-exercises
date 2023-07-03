@@ -125,3 +125,32 @@ const decimalToRoman = (num) => {
 return inRoman
 }
 console.log(decimalToRoman(399))
+
+//threeSum
+const threeSum = (arr, target) => {
+    arr.sort((a, b) => a - b)
+    let subSets = []
+
+    for(let i = 0; i < arr.length-2; i++){
+        if(arr[i] != arr[i-1]){
+            let left = i+1
+            let right = arr.length - 1
+            while(left < right){
+                let currentSum = arr[i] + arr[left] + arr[right]
+                if(currentSum > target){
+                    right--
+                }else if(currentSum < target){
+                    left++
+                }else if(currentSum === target){
+                    subSets.push([arr[i], arr[left], arr[right]])
+                    while(arr[left] == arr[left+1]) left++
+                    while(arr[right] == arr[right-1]) right--
+                    left++
+                    right--
+                }
+            }
+        }
+    }
+    return subSets
+}
+console.log(threeSum([8, 2, 1, 4, 10, 5, -1, -1], 8))
