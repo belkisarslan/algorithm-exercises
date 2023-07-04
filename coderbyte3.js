@@ -154,3 +154,64 @@ const threeSum = (arr, target) => {
     return subSets
 }
 console.log(threeSum([8, 2, 1, 4, 10, 5, -1, -1], 8))
+
+//scaleBalancing
+/*ilk verilen array içindeki değerleri bir terazinin sağ ve sol
+kefesi gibi düşünelim. İkinci verilen arraydeki değerleri kullanarak
+teraziyi eşitlemeye çalışalım. İkinci verilen değerler arasında
+toplama çıkarma yaparak işimize yarayan değeri elde edebiliriz.
+*/
+const scaleBalancing = (arr) => {
+   const [l, r] = returnNumerals(arr[0])
+//    console.log(`left ${l}`)
+//    console.log(`right ${r}`)
+   const availableWeights = returnNumerals(arr[1])
+//   console.log(availableWeights)
+     availableWeights.sort((a, b) => a - b)
+     //negatif çıkma durumuna karşı mutlak değere alıyoruz
+     const difference = Math.abs(l - r)
+     //Verilen değerlerin direkt kullanılmasıyla terazinin eşitlenmesi
+     if(availableWeights.indexOf(difference) > -1) return difference
+
+     //Verilen değerlerin toplanması ile terazinin eşitlenmesi
+     let leftIndex = 0
+     let rightIndex = availableWeights.length - 1
+     let countDown = 1
+     let result= ""
+
+     while(leftIndex < rightIndex && countDown > 0){
+        let sum = availableWeights[leftIndex] + availableWeights[rightIndex]
+        if(sum > difference){
+            rightIndex--
+        }else if(sum < difference){
+            leftIndex++
+        }else{
+            result = `${availableWeights[leftIndex]}, ${availableWeights[rightIndex]}`
+            countDown--
+        }
+    }
+    if(result != "") return result
+
+    //Verilen değerlere çıkarma işlemi uygulanarak terazinin eşitlenmesi
+    for(let i = availableWeights.length-1; i>0 ; i--){
+        for(let j=0; j<i; j++){
+            if(availableWeights[i] - availableWeights[j] === difference) result = `${availableWeights[i]}, ${availableWeights[j]}`
+        }
+    }
+    if(result != ""){
+        return result
+    }else{
+        return "Not Possible"
+    }
+}
+
+function returnNumerals(str){
+    let numerals = []
+    str.match(/\d+/g).forEach(element => {
+        numerals.push(Number(element))
+    })
+    return numerals
+}
+console.log(scaleBalancing(["[5, 9]", "[1, 2, 6, 7]"]))
+console.log(scaleBalancing(["[13, 4]", "[1, 2, 3, 6, 14]"]))
+console.log(scaleBalancing(["[3, 4]", "[1, 2, 7, 7]"]))
