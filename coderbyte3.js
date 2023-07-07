@@ -215,3 +215,24 @@ function returnNumerals(str){
 console.log(scaleBalancing(["[5, 9]", "[1, 2, 6, 7]"]))
 console.log(scaleBalancing(["[13, 4]", "[1, 2, 3, 6, 14]"]))
 console.log(scaleBalancing(["[3, 4]", "[1, 2, 7, 7]"]))
+
+//timeDifference
+const timeDifference = (t1, t2) =>{
+   let hour = Number(t2.split(':')[0]) - Number(t1.split(':')[0])
+   let minute = Number(t2.split(':')[1]) - Number(t1.split(':')[1])
+
+   if(minute < 0){
+    hour--
+    minute = minute + 60
+   }
+   if(hour < 0) hour = hour + 24
+
+   if(hour < 10) hour = "0" + hour.toString()
+   if(minute < 10) minute = "0" + minute.toString()
+   
+   return `${hour.toString()} : ${minute.toString()}` 
+
+}
+console.log(timeDifference("14:00", "16:45"))
+console.log(timeDifference("1:04", "13:05"))
+console.log(timeDifference("15:05", "13:04"))
