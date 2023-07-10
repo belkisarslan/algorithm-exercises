@@ -236,3 +236,19 @@ const timeDifference = (t1, t2) =>{
 console.log(timeDifference("14:00", "16:45"))
 console.log(timeDifference("1:04", "13:05"))
 console.log(timeDifference("15:05", "13:04"))
+
+//pascalTriangle
+const pascalTriangle = (NumOfRows) => {
+ let result = [[1]]
+ for(let i=0; i<NumOfRows; i++){
+    let temp = [0, ...result[result.length-1], 0]
+    let row = []
+
+    for(let j=0; j<result[result.length-1].length+1; j++){
+        row.push(temp[j]+temp[j+1])
+    }
+    result.push(row)
+ }
+ return result
+}
+console.log(pascalTriangle([8]))
