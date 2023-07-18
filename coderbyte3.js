@@ -252,3 +252,29 @@ const pascalTriangle = (NumOfRows) => {
  return result
 }
 console.log(pascalTriangle([8]))
+
+//closestEnemy
+//1 ve 2 rakamının arasındaki mesafe sorulmaktadır
+const closestEnemy = (arr) => {
+   let indexOf1 = arr.indexOf(1)
+   let indexesOf2 = []
+   let differences = []
+
+   //2 rakamının bulunduğu indexleri bulalım
+   for(let i = 0; i < arr.length; i++){
+    if(arr[i] === 2) indexesOf2.push(i)
+   }
+   
+   if(indexesOf2.length === 0) return 0
+
+   //2nin bulunduğu indexten 1in indexini mutlak değer alaral çıkartalım
+   indexesOf2.forEach((element) =>{
+    differences.push(Math.abs(element - indexOf1))
+   })
+
+   //birbirine en yakın 1 ve 2 yi hesaplayacağımız için min alalım
+   //min fonksiyonu array okumaz. Bu nedenle spread operator kullanmamız gerekir.
+   return Math.min(...differences)
+
+}
+console.log(closestEnemy([0, 0, 1, 0, 0, 2, 0, 2]))
