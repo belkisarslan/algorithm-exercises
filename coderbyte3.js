@@ -278,3 +278,11 @@ const closestEnemy = (arr) => {
 
 }
 console.log(closestEnemy([0, 0, 1, 0, 0, 2, 0, 2]))
+
+//fourLargest
+const fourLargest = (arr) =>{
+  let arrMax = []
+  arr.forEach(subArr => arrMax.push(Math.max(...subArr)))
+  return arrMax
+}
+console.log(fourLargest([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857]]))
