@@ -286,3 +286,17 @@ const fourLargest = (arr) =>{
   return arrMax
 }
 console.log(fourLargest([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857]]))
+
+//camelCase
+const camelCase = (str) => {
+ let arr = str.split(" ")
+ let camel = ""
+ arr.forEach(word => {
+    let firstLetter = word[0].toUpperCase()
+    let restOfTheword = word.substring(1)
+    let newWord = firstLetter + restOfTheword
+    camel += newWord
+ })
+ return camel
+}
+console.log(camelCase("I got intern at google"))
