@@ -342,3 +342,21 @@ const oneDecrement = (num) =>{
   return count
 }
 console.log(oneDecrement(5655984))
+
+//elementMerge 
+const elementMerge = (arr) =>{
+ let newArr = mergeArr(arr)
+ while(newArr.length > 1){
+    console.log(newArr)
+    newArr = mergeArr(newArr)
+ }
+ return newArr[0]
+}
+const mergeArr = (arr) =>{
+ let subArr = []
+ for(let i=1; i<arr.length; i++){
+    subArr.push(Math.abs(arr[i]-arr[i-1]))
+ }
+ return subArr
+}
+console.log(elementMerge([4, 5, 1, 2, 7]))
