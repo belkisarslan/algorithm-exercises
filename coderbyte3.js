@@ -320,3 +320,14 @@ const sumTheArr = (arr) =>{
  return arr.reduce((acc, currentValue)=>{return acc + currentValue}, 0)
 }
 console.log(sumMultipliers([2, 5, 6,-6, 16, 2, 3, 6, 5, 3]))
+
+//stringMerge
+const stringMerge = (str) => {
+    const [first, second] = str.split("*")
+    let combineWords = ""
+    for(let i = 0; i<first.length; i++){
+        combineWords += first[i]  + second[i]
+    }
+    return combineWords
+}
+console.log(stringMerge("abc1*kyoo"))
