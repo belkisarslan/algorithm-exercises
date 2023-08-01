@@ -331,3 +331,14 @@ const stringMerge = (str) => {
     return combineWords
 }
 console.log(stringMerge("abc1*kyoo"))
+
+//oneDecrement
+const oneDecrement = (num) =>{
+  let count = 0
+  const numStr = num.toString()
+  for(let i = 1; i<numStr.length; i++){
+    if(numStr[i] - numStr[i+1] == 1) count += 1
+  }
+  return count
+}
+console.log(oneDecrement(5655984))
