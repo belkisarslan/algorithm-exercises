@@ -306,3 +306,17 @@ const snakeCase = (str) =>{
  return str.replace(/[^a-zA-Z]/g,"_").toLowerCase()
 }
 console.log(snakeCase("BOB loves-coding"))
+
+//sumMultipliers
+const sumMultipliers = (arr) =>{
+  let sum = sumTheArr(arr)
+  const secondGreatest = arr.sort((a,b)=>a-b)[arr.length-2]
+  const greatest = Math.max(...arr)
+  const multiplication = greatest * secondGreatest
+  return multiplication > sum * 2 ? true : false
+
+}
+const sumTheArr = (arr) =>{
+ return arr.reduce((acc, currentValue)=>{return acc + currentValue}, 0)
+}
+console.log(sumMultipliers([2, 5, 6,-6, 16, 2, 3, 6, 5, 3]))
