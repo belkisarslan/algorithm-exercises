@@ -300,3 +300,9 @@ const camelCase = (str) => {
  return camel
 }
 console.log(camelCase("I got intern at google"))
+
+//snakeCase
+const snakeCase = (str) =>{
+ return str.replace(/[^a-zA-Z]/g,"_").toLowerCase()
+}
+console.log(snakeCase("BOB loves-coding"))
