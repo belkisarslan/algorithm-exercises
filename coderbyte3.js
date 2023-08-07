@@ -360,3 +360,13 @@ const mergeArr = (arr) =>{
  return subArr
 }
 console.log(elementMerge([4, 5, 1, 2, 7]))
+
+//asciiConversion 
+const asciiConversion = (str) =>{
+  let ascii = ""
+  for(let i = 0; i < str.length; i++){
+    ascii += str[i].charCodeAt()
+  }
+  return ascii
+}
+console.log(asciiConversion("dog"))
