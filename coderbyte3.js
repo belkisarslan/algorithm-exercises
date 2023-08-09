@@ -370,3 +370,15 @@ const asciiConversion = (str) =>{
   return ascii
 }
 console.log(asciiConversion("dog"))
+
+//gCf
+const gCf = (arr) =>{
+ const [first, second] = arr
+ let cielingValue = Math.min(...arr)
+ let divisors = []
+ for(let i=1; i<=cielingValue; i++){
+    if(first %i === 0 && second %i === 0) divisors.push(i)
+ }
+return Math.max(...divisors)
+}
+console.log("ebob(45, 12) =", gCf([45, 12]))
