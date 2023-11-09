@@ -26,3 +26,20 @@ const lengthOfLongest = (s) =>{
 }
 console.log(lengthOfLongest("abcabcbb"))
 
+/*
+input ["react", "redux", "red"]
+output "re"
+*/
+const sameChar = (str) =>{
+let exampleChar = str[0];
+let longestChar = "";
+let newChar = []
+for(var i=0;i<=exampleChar.length; i++){
+    newChar=[...newChar,exampleChar[i]];
+    if(str.every((e) => e.includes(newChar.join("")))){
+        longestChar = newChar.join("");;
+    }
+}
+return longestChar
+}
+console.log(sameChar(["react", "redux", "red"]))
